@@ -14,7 +14,7 @@ html, body {
     width: 900px;
     height: 200px;
     margin: 0 auto;
-    font-family: monospace, "Courier New", courier;
+    font-family: courier, monospace ;
     color: #bbb;
     font-size: 100px;
     position: relative;
