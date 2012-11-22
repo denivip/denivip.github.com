@@ -1,6 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 .msg {
     margin: 150px auto;
     text-align: center;
     font-family: monospace;
     font-size: 16px;
+}
+
+.header {
+    width: 900px;
+    height: 200px;
+    margin: 0 auto;
+    font-family: monospace, "Courier New", courier;
+    color: #bbb;
+    font-size: 100px;
+    position: relative;
+    /*background: transparent url('../images/header.png') center center no-repeat;*/
+}
+
+.header__item {
+    position: absolute;
+    line-height: 100px;
+}
+
+.header__item__labs {
+    top: 50px;
+    right: 610px;
+
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.header__item__denivip {
+    top: 50px;
+    left: 410px;
+
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.header:hover .header__item__labs,
+.header:hover .header__item__denivip {
+    /*color: #2ac0cc;*/
+
+}
+
+.header__item__flask {
+    width: 106px;
+    height: 135px;
+    background: transparent url('../images/flask.png') center center no-repeat;
+    top: 28px;
+    left: 296px;
+
+
 }
