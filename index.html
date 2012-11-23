@@ -45,8 +45,13 @@
 <div class="wrapper">
     <h1 id="projects">Projects</h1>
 
+    <div class="filters">
+        <span class="filters__item filters__item_all filters__item_active">all</span>
+        <span class="filters__item filters__item_javascript" data-filter="javascript">#JavaScript</span>
+    </div>
+
     <div class="projects">
-        <div class="project__item project__item_dchat">
+        <div class="project__item project__item_dchat" data-tag="javascript">
             <i class="icon-cog project__item__background"></i>
 
             <div class="project__item__title">DChat</div>
@@ -84,7 +89,7 @@
             </div>
         </div>
 
-        <div class="project__item project__item_analytics">
+        <div class="project__item project__item_analytics" data-tag="javascript">
             <i class="icon-cog project__item__background"></i>
 
             <div class="project__item__title">Analytics Service</div>
@@ -122,7 +127,7 @@
             </div>
         </div>
 
-        <div class="project__item project__item_vast">
+        <div class="project__item project__item_vast" data-tag="javascript">
             <i class="icon-cog project__item__background"></i>
 
             <div class="project__item__title">Video Vast Plugin</div>

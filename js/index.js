@@ -1,4 +1,6 @@
 $(function() {
+    var activeFilter = null;
+
     function goToByScroll(id){
         $('html,body').animate({scrollTop: $('#' + id).offset().top},'fast');
     }
@@ -8,6 +10,33 @@ $(function() {
         e.preventDefault();
 
         goToByScroll($(e.target).data('anchor'));
+    });
+
+    $('.filters__item').click(function(e) {
+        activeFilter = $(e.target).data('filter');
+
+        var items = $('.project__item'),
+            itemsDel = [];
+
+        items.removeClass('hidden');
+
+        if (activeFilter) {
+            for (var i = 0; i<= items.length; i++) {
+                if ($(items[i]).data('tag') != activeFilter) {
+                    itemsDel.push(items[i]);
+                }
+            }
+
+            for (var i = 0; i<= itemsDel.length; i++) {
+                $(itemsDel[i]).addClass('hidden');
+            }
+        }
+
+        $('.filters__item').removeClass('filters__item_active');
+
+        $(e.target).addClass('filters__item_active');
+
+
     });
 
     $('.twitter').click(function(e) {
