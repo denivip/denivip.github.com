@@ -145,7 +145,7 @@ a:hover {
     font-size: 20px;
     text-align: center;
     position: relative;
-    z-index: 10px;
+    z-index: 10;
 }
 
 .menu__item {
@@ -313,18 +313,21 @@ h1 {
     opacity: 1;
 }
 
-.project__item__more {
-    position: absolute;
-    bottom: 15px;
-    right: 110px;
-}
+.project__item__more,
+.project__item__download,
 .project__item__forkit {
+    float: right;
+    margin-left: 20px;
+}
+
+.project__item__btns {
     position: absolute;
     bottom: 15px;
     right: 20px;
 }
 
 .project__item__socials i,
+.project__item__download i,
 .project__item__forkit i,
 .project__item__more i {
     position: relative;
