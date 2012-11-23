@@ -7,6 +7,7 @@
     <title>labs@denivip</title>
 
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -16,21 +17,107 @@
 
 <body>
 
-    <div class="header">
-        <div class="header__item header__item__labs">
-            labs
-        </div>
+<i class="icon-cogs background animated"></i>
 
-        <div class="header__item header__item__flask animated" id="flask"></div>
+<!--div class="header">
+    <div class="header__item header__item__flask animated" id="flask"></div>
+</div-->
 
-        <div class="header__item header__item__denivip">
-            denivip
+<div class="header">
+    <div class="header__item header__item__labs">
+        labs
+    </div>
+    <i class="icon-beaker flask animated" id="flask"></i>
+
+    <div class="header__item header__item__denivip">
+        denivip
+    </div>
+</div>
+
+<div class="menu">
+    <a class="menu__item" href="#projects">Projects</a>
+    <a class="menu__item" href="#about">About Us</a>
+    <a class="menu__item" href="#contacts">Contacts</a>
+</div>
+
+<div class="wrapper">
+    <h1 id="projects">Projects</h1>
+
+    <div class="projects">
+        <div class="project__item project__item_dchat">
+            <i class="icon-cog project__item__background"></i>
+
+            <div class="project__item__title">DChat</div>
+            <div class="project__item__descr">Node.js chat service based on websockets.</div>
+
+            <div class="project__item__tags">
+                #JavaScript #Node.js #WebSockets #Highload
+            </div>
+
+            <div class="project__item__socials">
+                <a href="https://twitter.com/share" target="_blank" title="Tweet It" class="twitter"
+                   data-lang="en"
+                   data-url="http://denivip.github.com/DChat/"
+                   data-hashtags="denivip,dchat"
+                   data-text="Look at this awesome Node.js chat based on websockets!">
+                    <i class="icon-twitter"></i>
+                </a>
+
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                <a href="https://plusone.google.com/" target="_blank" title="Google+" class="google"
+                   data-lang="en"
+                   data-url="http://denivip.github.com/DChat/"
+                   data-hashtags="denivip,dchat"
+                   data-text="Look at this awesome Node.js chat based on websockets!">
+                    <i class="icon-google-plus"></i>
+                </a>
+
+            </div>
+
+            <div class="project__item__forkit"><a href="/DChat/"><i class="icon-github"></i> fork it</a></div>
+
+            <div class="project__item__more"><a href="/DChat/"><i class="icon-home"></i> visit page</a></div>
         </div>
     </div>
 
-    <div class="body">
+    <h1 id="about">About Us</h1>
+
+    <div class="text">
+
+        <p>DENIVIP Media started its business in 2008. The company is focused at the market of innovative services
+            to Internet users. An important area of expertise of the company is the converged multimedia portal for
+            TV, Internet and mobile devices to create unique services based on customer existing infrastructure.
+        </p>
+
+
+        <p>We develop complex Web projects, online video services, mobile applications, and TV widgets.
+            Our developers are eager to ensure the high quality of your Internet projects and advise your staff
+            to achieve the best results. We have a sound expertise in C/C + +, PHP, Java, Perl, JavaScript,
+            ActionScript, Flash/Flex, HTML, CSS — and all video related technologies.</p>
+
+        <p>We really enjoy creating new and exciting services. We invite you to explore our portfolio
+            and demo pages containing examples of our products and solutions.</p>
 
     </div>
+
+    <h1 id="contacts">Contacts</h1>
+
+    <div class="contacts">
+        <a href="http://www.denivip.ru/en" class="contacts__item contacts__item_site">
+            <i class="icon-globe"></i> Our Site
+        </a>
+        <a href="http://blog.denivip.ru/?lang=en"  class="contacts__item contacts__item_site">
+            <i class="icon-pencil"></i> Our Blog
+        </a>
+        <a href="mailto:info@denivip.ru" class="contacts__item contacts__item_site">
+            <i class="icon-envelope-alt"></i> Our Mail
+        </a>
+
+    </div>
+
+
+</div>
 
 </body>
 </html>

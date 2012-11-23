@@ -1,7 +1,26 @@
 html, body {
     margin: 0;
     padding: 0;
+    position: relative;
+    font-family: Tahoma;
 }
+
+
+a {
+    color: #333;
+    text-decoration: none;
+
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #23B5C6;
+}
+
+
 
 .msg {
     margin: 150px auto;
@@ -9,6 +28,30 @@ html, body {
     font-family: monospace;
     font-size: 16px;
 }
+
+.background {
+    position: fixed;
+    bottom: -170px;
+    left: 50%;
+    margin-left: -270px;
+    font-size: 600px;
+    color: #f9f9f9;
+    line-height: 600px;
+    cursor: default;
+    text-align: center;
+}
+
+/*.header {
+    width: 900px;
+    height: 200px;
+    margin: 0 auto;
+    font-family: courier, monospace ;
+    color: #bbb;
+    font-size: 100px;
+    position: relative;
+    background: transparent url('../images/header.png') center center no-repeat;
+    cursor: default;
+}*/
 
 .header {
     width: 900px;
@@ -18,7 +61,8 @@ html, body {
     color: #bbb;
     font-size: 100px;
     position: relative;
-    /*background: transparent url('../images/header.png') center center no-repeat;*/
+    cursor: default;
+
 }
 
 .header__item {
@@ -57,7 +101,239 @@ html, body {
     height: 135px;
     background: transparent url('../images/flask.png') center center no-repeat;
     top: 28px;
-    left: 296px;
+    left: 308px;
 
 
+}
+
+.flask {
+    font-size: 150px;
+    left: 294px;
+    position: absolute;
+    top: 20px;
+    color: #23B5C6;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.header:hover .flask {
+    color: #23B5C6;
+}
+
+.menu {
+    margin: -15px auto 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.menu__item {
+    margin: 0 10px;
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.menu__item:hover {
+    background-color: #23B5C6;
+    color: #fff;
+}
+
+.wrapper {
+    width: 700px;
+    margin: 0px auto 0;
+}
+
+h1 {
+    margin-left: 30px;
+    color: #333;
+    position: relative;
+}
+
+.projects {
+    width: 700px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+.project__item {
+    padding-left: 243px;
+    height: 130px;
+    color: #666;
+    margin: 20px 0;
+    opacity: 0.9;
+    position: relative;
+    padding-bottom: 40px;
+    box-shadow: 0 1px 3px #ccc;
+    border-radius: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+
+    overflow: hidden;
+
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.project__item:hover {
+    opacity: 1;
+}
+
+.project__item__background {
+    font-size: 300px;
+    color: #f1f1f1;
+    position: absolute;
+    right: -100px;
+    cursor: default;
+    line-height: 170px;
+    right: -113px;
+    top: -85px;
+}
+
+.project__item_dchat {
+    background: #fafafa url('../projects/dchat.jpg') left top no-repeat;
+
+}
+
+.project__item__title {
+    color: #333;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0 10px;
+    position: relative;
+    z-index: 2;
+
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.project__item__tags {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    color: #aaa;
+
+    font-size: 14px;
+    line-height: 30px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    width: 150px;
+
+    -moz-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+
+    text-align: right;
+
+}
+
+.project__item:hover .project__item__tags {
+    width: 320px;
+}
+
+.project__item__descr {
+    position: relative;
+}
+
+.project__item:hover .project__item__title {
+    /*color: #23B5C6;*/
+}
+
+.project__item__socials {
+    position: absolute;
+    bottom: 15px;
+    left: 242px;
+    visibility: hidden;
+    opacity: 0;
+
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+
+
+.project__item:hover .project__item__socials {
+    visibility: visible;
+    opacity: 1;
+}
+
+.project__item__forkit {
+    position: absolute;
+    bottom: 15px;
+    right: 130px;
+}
+
+.project__item__more {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.project__item__socials i,
+.project__item__forkit i,
+.project__item__more i {
+    position: relative;
+    top: 2px;
+    font-size: 20px;
+}
+
+.text {
+    position: relative;
+    margin: 10px;
+}
+
+.contacts {
+    position: relative;
+    text-align: center;
+}
+.contacts__item {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+
+    margin: 0 5px 20px;
+
+    font-size: 30px;
+    line-height: 30px;
+
+    padding: 10px 15px 20px;
+
+    box-shadow: 0 1px 3px #ccc;
+    border-radius: 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+
+    text-align: center;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.contacts__item:hover {
+    opacity: 1;
+    border-color: #23B5C6;
+}
+
+.contacts__item i {
+    font-size: 60px;
+    line-height: 30px;
+    top: 10px;
+
+    position: relative;
 }
