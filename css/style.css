@@ -226,6 +226,10 @@ h1 {
     background: #fafafa url('../projects/video-analytics.jpg') left top no-repeat;
 }
 
+.project__item_vast {
+    background: #fafafa url('../projects/adv.jpg') left top no-repeat;
+}
+
 .project__item__title {
     color: #333;
     font-size: 25px;
@@ -277,20 +281,24 @@ h1 {
 
 .project__item_analytics:hover .project__item__title {
     width: 200px;
+}
 
 
+.project__item_vast:hover .project__item__title {
+    width: 290px;
 }
 
 .project__item:hover .project__item__tags {
-    width: 320px;
+    width: 150px;
+}
+
+
+.project__item_vast .project__item__tags{
+    width: 90px;
 }
 
 .project__item__descr {
     position: relative;
-}
-
-.project__item:hover .project__item__title {
-    /*color: #23B5C6;*/
 }
 
 .project__item__socials {
