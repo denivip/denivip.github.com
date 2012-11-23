@@ -244,6 +244,8 @@ h1 {
 
     width: 500px;
 
+    cursor: default;
+
     -moz-transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -258,13 +260,14 @@ h1 {
     color: #aaa;
 
     font-size: 14px;
-    line-height: 30px;
+    line-height: 27px;
+    letter-spacing: -0.3px;
 
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 
-    width: 150px;
+    width: 90px;
 
     -moz-transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
@@ -275,30 +278,13 @@ h1 {
 
 }
 
-.project__item_analytics .project__item__tags{
-    width: 90px;
-}
-
-.project__item_analytics:hover .project__item__title {
-    width: 200px;
-}
-
-
-.project__item_vast:hover .project__item__title {
-    width: 290px;
-}
-
 .project__item:hover .project__item__tags {
     width: 300px;
 }
 
-
-.project__item_vast .project__item__tags{
-    width: 90px;
-}
-
 .project__item__descr {
     position: relative;
+    cursor: default;
 }
 
 .project__item__socials {
@@ -319,6 +305,11 @@ h1 {
 .project__item:hover .project__item__socials {
     visibility: visible;
     opacity: 1;
+}
+
+.twitter {
+    position: relative;
+    top: -1px;
 }
 
 .project__item__more,
@@ -346,6 +337,11 @@ h1 {
 .text {
     position: relative;
     margin: 10px;
+    text-align: justify;
+}
+
+.text p {
+    text-indent: 20px;
 }
 
 .contacts {
