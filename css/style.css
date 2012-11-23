@@ -68,6 +68,9 @@ a:hover {
     position: relative;
     cursor: default;
 
+    text-shadow: 0 1px 5px #CCCCCC;
+    text-transform: uppercase;
+
 }
 
 .header__item {
