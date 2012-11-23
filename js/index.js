@@ -1,4 +1,15 @@
 $(function() {
+    function goToByScroll(id){
+        $('html,body').animate({scrollTop: $('#' + id).offset().top},'fast');
+    }
+
+    $('.menu__item').click(function(e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+
+        goToByScroll($(e.target).data('anchor'));
+    });
+
     $('.twitter').click(function(e) {
         e.stopImmediatePropagation();
         e.preventDefault();
