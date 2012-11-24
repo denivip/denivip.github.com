@@ -14,7 +14,12 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://www.underscorejs.org/underscore-min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="application/mustache.js"></script>
+    <script src="application/application.js"></script>
+    <script src="application/templates/templates.js"></script>
+    <script src="application/models/projects-model.js"></script>
+    <script src="application/models/tags-model.js"></script>
+    <script src="application/views/projects-view.js"></script>
 </head>
 
 <body>
@@ -46,123 +51,9 @@
     <h1 id="projects">Projects</h1>
 
     <div class="filters">
-        <span class="filters__item filters__item_all filters__item_active">all</span>
-        <span class="filters__item filters__item_javascript" data-filter="javascript">#JavaScript</span>
     </div>
 
     <div class="projects">
-        <div class="project__item project__item_dchat" data-tag="javascript">
-            <i class="icon-cog project__item__background"></i>
-
-            <div class="project__item__title">DChat</div>
-            <div class="project__item__descr">Node.js chat service based on websockets.</div>
-
-            <div class="project__item__tags">
-                #JavaScript #Node.js #WebSockets
-            </div>
-
-            <div class="project__item__socials">
-                <a href="https://twitter.com/share" target="_blank" title="Tweet It" class="twitter"
-                   data-lang="en"
-                   data-url="http://denivip.github.com/DChat/"
-                   data-hashtags="denivip,dchat"
-                   data-text="Look at this awesome Node.js chat based on websockets!">
-                    <i class="icon-twitter"></i>
-                </a>
-
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-                <a href="https://plusone.google.com/" target="_blank" title="Google+" class="google"
-                   data-lang="en"
-                   data-url="http://denivip.github.com/DChat/"
-                   data-hashtags="denivip,dchat"
-                   data-text="Look at this awesome Node.js chat based on websockets!">
-                    <i class="icon-google-plus"></i>
-                </a>
-
-            </div>
-
-            <div class="project__item__btns">
-                <div class="project__item__more"><a href="/DChat/"><i class="icon-home"></i> visit page</a></div>
-                <div class="project__item__forkit"><a href="https://github.com/denivip/DChat"><i class="icon-github"></i> fork it</a></div>
-                <div class="project__item__download"><a href="https://github.com/denivip/DChat/archive/master.zip"><i class="icon-download"></i> get it</a></div>
-            </div>
-        </div>
-
-        <div class="project__item project__item_analytics" data-tag="javascript">
-            <i class="icon-cog project__item__background"></i>
-
-            <div class="project__item__title">Analytics Service</div>
-            <div class="project__item__descr">Node.js project that provides service
-                for collecting statistic information from video player.</div>
-
-            <div class="project__item__tags">
-                #JavaScript #Node.js #WebSockets
-            </div>
-
-            <div class="project__item__socials">
-                <a href="https://twitter.com/share" target="_blank" title="Tweet It" class="twitter"
-                   data-lang="en"
-                   data-url="https://github.com/denivip/analytics"
-                   data-hashtags="denivip,video-analytics"
-                   data-text="Look at this awesome DENIVIP Analytics Service">
-                    <i class="icon-twitter"></i>
-                </a>
-
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-                <a href="https://plusone.google.com/" target="_blank" title="Google+" class="google"
-                   data-lang="en"
-                   data-url="https://github.com/denivip/analytics"
-                   data-hashtags="denivip,video-analytics"
-                   data-text="Look at this awesome DENIVIP Analytics Service">
-                    <i class="icon-google-plus"></i>
-                </a>
-
-            </div>
-
-            <div class="project__item__btns">
-                <div class="project__item__forkit"><a href="https://github.com/denivip/analytics"><i class="icon-github"></i> fork it</a></div>
-                <div class="project__item__download"><a href="https://github.com/denivip/analytics/archive/master.zip"><i class="icon-download"></i> get it</a></div>
-            </div>
-        </div>
-
-        <div class="project__item project__item_vast" data-tag="javascript">
-            <i class="icon-cog project__item__background"></i>
-
-            <div class="project__item__title">Video Vast Plugin</div>
-            <div class="project__item__descr">Video Ads for your HTML5 player.</div>
-
-            <div class="project__item__tags">
-                #JavaScript #HTML5
-            </div>
-
-            <div class="project__item__socials">
-                <a href="https://twitter.com/share" target="_blank" title="Tweet It" class="twitter"
-                   data-lang="en"
-                   data-url="https://github.com/denivip/html5-video-vast-plugin"
-                   data-hashtags="denivip,html5-video-vast-plugin"
-                   data-text="Look at this awesome HTML5 Video Vast Plugin">
-                    <i class="icon-twitter"></i>
-                </a>
-
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-                <a href="https://plusone.google.com/" target="_blank" title="Google+" class="google"
-                   data-lang="en"
-                   data-url="https://github.com/denivip/analytics"
-                   data-hashtags="denivip,video-analytics"
-                   data-text="Look at this awesome HTML5 Video Vast Plugin">
-                    <i class="icon-google-plus"></i>
-                </a>
-
-            </div>
-
-            <div class="project__item__btns">
-                <div class="project__item__forkit"><a href="https://github.com/denivip/html5-video-vast-plugin"><i class="icon-github"></i> fork it</a></div>
-                <div class="project__item__download"><a href="https://github.com/denivip/html5-video-vast-plugin/archive/master.zip"><i class="icon-download"></i> get it</a></div>
-            </div>
-        </div>
     </div>
 
     <h1 id="about">About Us</h1>

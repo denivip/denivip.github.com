@@ -4,14 +4,13 @@ html, body {
     position: relative;
     font-family: Tahoma;
 
-    background: -moz-linear-gradient(top,  rgba(242,242,242,0.65) 0%, rgba(255,255,255,0.59) 10%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,242,242,0.65)), color-stop(10%,rgba(255,255,255,0.59)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(242,242,242,0.65) 0%,rgba(255,255,255,0.59) 10%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(242,242,242,0.65) 0%,rgba(255,255,255,0.59) 10%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(242,242,242,0.65) 0%,rgba(255,255,255,0.59) 10%,rgba(255,255,255,0) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(242,242,242,0.65) 0%,rgba(255,255,255,0.59) 10%,rgba(255,255,255,0) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6f2f2f2', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-
+    background: -moz-linear-gradient(top, rgba(242, 242, 242, 0.65) 0%, rgba(255, 255, 255, 0.59) 10%, rgba(255, 255, 255, 0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(242, 242, 242, 0.65)), color-stop(10%, rgba(255, 255, 255, 0.59)), color-stop(100%, rgba(255, 255, 255, 0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(242, 242, 242, 0.65) 0%, rgba(255, 255, 255, 0.59) 10%, rgba(255, 255, 255, 0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(242, 242, 242, 0.65) 0%, rgba(255, 255, 255, 0.59) 10%, rgba(255, 255, 255, 0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(242, 242, 242, 0.65) 0%, rgba(255, 255, 255, 0.59) 10%, rgba(255, 255, 255, 0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(242, 242, 242, 0.65) 0%, rgba(255, 255, 255, 0.59) 10%, rgba(255, 255, 255, 0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#a6f2f2f2', endColorstr = '#00ffffff', GradientType = 0); /* IE6-9 */
 
 }
 
@@ -34,8 +33,6 @@ a {
 a:hover {
     color: #23B5C6;
 }
-
-
 
 .msg {
     margin: 150px auto;
@@ -72,7 +69,7 @@ a:hover {
     width: 900px;
     height: 200px;
     margin: 0 auto;
-    font-family: courier, monospace ;
+    font-family: courier, monospace;
     color: #aaa;
     font-size: 100px;
     position: relative;
@@ -120,7 +117,6 @@ a:hover {
     background: transparent url('../images/flask.png') center center no-repeat;
     top: 28px;
     left: 308px;
-
 
 }
 
@@ -328,8 +324,6 @@ h1 {
     transition: all 0.2s ease;
 }
 
-
-
 .project__item:hover .project__item__socials {
     visibility: visible;
     opacity: 1;
@@ -338,6 +332,7 @@ h1 {
 .twitter {
     position: relative;
     top: -1px;
+    margin-right: 5px;
 }
 
 .project__item__more,
@@ -376,6 +371,7 @@ h1 {
     position: relative;
     text-align: center;
 }
+
 .contacts__item {
     display: inline-block;
     *display: inline;
