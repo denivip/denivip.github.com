@@ -61,6 +61,15 @@ gitPage.models.projectsModel = {
             tags:['#JavaScript'],
             pageUrl:null,
             gitFullName: 'denivip/android-openx-widget'
+        },
+
+        {
+            title:'FoursquareNearby',
+            description:'View controller for iOS applications with foursquare venues search.',
+            image:'foursquare.png',
+            tags:['#Objective-C', '#iOS'],
+            pageUrl:null,
+            gitFullName: 'denivip/FoursquareNearby'
         }
     ]
 };
