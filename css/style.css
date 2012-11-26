@@ -240,6 +240,8 @@ h1 {
     *display: inline;
     *zoom: 1;
 
+    vertical-align: top;
+
     width: 350px;
     text-align: left;
 
