@@ -4,7 +4,7 @@ gitPage.templates = {
     project: '<div class="project__item" data-tag="{{tagsString}}">' +
                 '<i class="icon-cog project__item__background"></i>' +
                 '<img class="project__item__img" src="projects/{{image}}">' +
-                '<div class="project__item__title">{{title}}</div>' +
+                '<div class="project__item__title" title="{{title}}">{{title}}</div>' +
                 '<div class="project__item__descr">{{description}}</div>' +
 
                 '<div class="project__item__tags">{{tagsString}}</div>' +

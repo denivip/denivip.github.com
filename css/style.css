@@ -284,6 +284,7 @@ h1 {
 .project__item__title {
     color: #333;
     font-size: 25px;
+    letter-spacing: -2px;
     font-weight: bold;
     margin: 15px 0 10px;
     position: relative;

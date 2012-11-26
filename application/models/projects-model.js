@@ -37,7 +37,7 @@ gitPage.models.projectsModel = {
         },
 
         {
-            title:'iOS VAST library',
+            title:'iOS VAST Library',
             description:'Sample project and reusable classes that implement the following video advertising features.',
             image:'ios-vast.png',
             tags:['#Objective-C', '#iOS'],
@@ -46,7 +46,7 @@ gitPage.models.projectsModel = {
         },
 
         {
-            title:'JQuery OpenX tag plugin',
+            title:'JQuery OpenX Tag Plugin',
             description:'This plugin provides alternative jQuery-compatible way to insert OpenX ad invocation tags into various parts of your web page.',
             image:'openx.png',
             tags:['#JavaScript'],
