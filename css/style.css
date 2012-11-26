@@ -87,7 +87,7 @@ a:hover {
 
 .header__item__labs {
     top: 50px;
-    right: 610px;
+    right: 600px;
 
     -moz-transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;
@@ -97,7 +97,7 @@ a:hover {
 
 .header__item__denivip {
     top: 50px;
-    left: 410px;
+    left: 420px;
 
     -moz-transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;
@@ -122,7 +122,7 @@ a:hover {
 
 .flask {
     font-size: 150px;
-    left: 294px;
+    left: 302px;
     position: absolute;
     top: 20px;
     color: #23B5C6;

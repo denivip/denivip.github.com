@@ -182,7 +182,28 @@ gitPage.views.Projects = function () {
         $('.filters__item').click(_onFilterCheck);
     }
 
+    var _stringSorter = function(a,b) {
+        if (a.title < b.title) {
+            return -1;
+        }
+
+        if (a.title > b.title) {
+            return 1;
+        }
+
+        return 0;
+    }
+
+    var _randomSorter = function() {
+        return (Math.round(Math.random())-0.5);
+    }
+
     _prepareTags();
+
+
+
+    //sort projects
+    _model.projects.sort(_randomSorter);
 }
 
 gitPage.views.projects = new gitPage.views.Projects();
