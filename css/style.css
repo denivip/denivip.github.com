@@ -137,11 +137,15 @@ a:hover {
 }
 
 .menu {
-    margin: -15px auto 15px;
+    margin: -15px auto 0px;
     font-size: 20px;
     text-align: center;
     position: relative;
     z-index: 10;
+
+    height: 95px;
+
+    background: transparent url(../images/header_bg.png) center bottom repeat-x;
 }
 
 .menu__item {
@@ -174,18 +178,21 @@ h1 {
 
 }
 
-.projects {
-    width: 700px;
-    margin: 0 auto;
-    z-index: 2;
+.preloader {
+    background: transparent url(../images/preloader.gif) center center no-repeat;
+    height: 233px;
     position: relative;
 }
 
 .filters {
-    position: absolute;
+    /*position: absolute;
     top: 12px;
-    right: 30px;
+    right: 30px;*/
+    position: relative;
+    z-index: 1;
     color: #999;
+    text-align: center;
+    margin: 6px 10px 10px;
 }
 
 .filters__item {
@@ -206,18 +213,35 @@ h1 {
     color: #333;
 }
 
+.projects {
+    /*width: 700px;*/
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+
+    text-align: center;
+}
+
 .project__item {
     padding-left: 243px;
     height: 130px;
     color: #666;
-    margin: 20px 0;
+    margin:10px;;
     opacity: 0.9;
     position: relative;
     padding-bottom: 40px;
-    box-shadow: 0 1px 3px #ccc;
+    box-shadow: 0 2px 5px #AAA;
     border-radius: 5px;
     border: 1px solid #999;
     background-color: #fff;
+
+    /*float: left;*/
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+
+    width: 350px;
+    text-align: left;
 
     overflow: hidden;
 
@@ -242,16 +266,17 @@ h1 {
     top: -85px;
 }
 
-.project__item_dchat {
-    background: #fafafa url('../projects/dchat.jpg') left top no-repeat;
-}
+.project__item__img {
+    width: 220px;
+    height: 170px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #aaa;
 
-.project__item_analytics {
-    background: #fafafa url('../projects/video-analytics.jpg') left top no-repeat;
-}
-
-.project__item_vast {
-    background: #fafafa url('../projects/adv.jpg') left top no-repeat;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
 }
 
 .project__item__title {
@@ -266,7 +291,7 @@ h1 {
     white-space: nowrap;
     text-overflow: ellipsis;
 
-    width: 500px;
+    width: 255px;
 
     cursor: default;
 
@@ -302,11 +327,20 @@ h1 {
 
 }
 
+.project__item:hover .project__item__title {
+    width: 200px;
+}
+
 .project__item:hover .project__item__tags {
     width: 300px;
 }
 
 .project__item__descr {
+    margin-right: 20px;
+    max-height: 65px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     position: relative;
     cursor: default;
 }

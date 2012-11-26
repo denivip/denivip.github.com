@@ -10,7 +10,7 @@ gitPage.views.Projects = function () {
                 _tags.addTag(tags[tag]);
             }
 
-            _model.projects[proj].tagsString = _model.projects[proj].tags.join(' ');
+            _model.projects[proj].tagsString = _model.projects[proj].tags.join(' ') + ' ';
         }
     }
 
@@ -45,10 +45,27 @@ gitPage.views.Projects = function () {
 
     var _showFiltes = function () {
         var obj = gitPage.utils.tpl(gitPage.templates.filter, 'all', 'filter'),
-            filters = $('.filters');
+            filters = $('.filters'),
+            sortable = [];
 
         for (var tag in _tags.tags) {
-            obj += gitPage.utils.tpl(gitPage.templates.filter, tag, 'filter');
+            sortable.push([tag, _tags.tags[tag]]);
+        }
+
+        sortable.sort(function(a,b) {
+            if (a[1] < b[1]) {
+                return 1;
+            }
+
+            if (a[1] > b[1]) {
+                return -1;
+            }
+
+            return 0;
+        });
+
+        for (var i = 0; i < sortable.length; i++) {
+            obj += gitPage.utils.tpl(gitPage.templates.filter, sortable[i][0], 'filter');
         }
 
         filters.html(obj);
@@ -70,7 +87,7 @@ gitPage.views.Projects = function () {
             var project = _model.projects[proj];
 
             if ((gitPage.config.activeFilter !== 'all') &&
-                (project.tagsString.search(gitPage.config.activeFilter) == -1)) {
+                (project.tagsString.search(gitPage.config.activeFilter + ' ') == -1)) {
 
                 continue;
             }
@@ -79,17 +96,88 @@ gitPage.views.Projects = function () {
         }
 
         $('.projects').html(obj);
-        ;
-
 
         //console.log(obj);
         //gitPage.utils.tpl(gitPage.templates.project, 'filter', 'all');
     }
 
+    var _getForks = function(proj, callback) {
+        var self = this;
+
+        $.ajax({
+            url: proj.git.forks_url,
+            type: "get",
+            success: function(data) {
+                proj.forks = data.data;
+
+                callback.call(self);
+            },
+            dataType: "jsonp"
+        });
+
+    }
+
+    var _getStargazers = function(proj, callback) {
+        var self = this;
+
+        $.ajax({
+            url: proj.git.stargazers_url,
+            type: "get",
+            success: function(data) {
+                proj.stargazers = data.data;
+
+                _getForks(proj, callback);
+            },
+            dataType: "jsonp"
+        });
+    }
+
+    var _prepareGitData = function(callback) {
+        for (var proj in _model.projects) {
+            //copy data to projects
+            for (var gitProj in _model.gitData) {
+                if (_model.projects[proj].gitFullName == _model.gitData[gitProj].full_name) {
+                    _model.projects[proj].git = _model.gitData[gitProj];
+                }
+            }
+
+            _getStargazers(_model.projects[proj], callback);
+
+        }
+
+
+
+    }
+
+    var _getProjectsInfo = function(callback) {
+        var self = this;
+
+        $.ajax({
+            url: "https://api.github.com/orgs/denivip/repos",
+            type: "get",
+            success: function(data) {
+                if (data.data.message) {
+                    callback.call(self);
+                } else {
+                    _model.gitData = data.data;
+
+                    _prepareGitData(callback);
+                }
+            },
+            dataType: "jsonp"
+        });
+    }
+
     this.show = function () {
 
-        _showFiltes();
-        _showProjects();
+
+
+        //_getProjectsInfo(function() {
+            $('.preloader').remove();
+
+            _showFiltes();
+            _showProjects();
+        //});
 
         $('.filters__item').click(_onFilterCheck);
     }

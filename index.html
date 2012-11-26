@@ -13,8 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://www.underscorejs.org/underscore-min.js"></script>
-    <script src="application/mustache.js"></script>
+    <script src="js/mustache.js"></script>
     <script src="application/application.js"></script>
     <script src="application/templates/templates.js"></script>
     <script src="application/models/projects-model.js"></script>
@@ -47,15 +46,18 @@
     <a class="menu__item" href="#contacts" data-anchor="contacts">Contacts</a>
 </div>
 
+<div class="preloader">
+</div>
+
+<div class="filters" id="projects">
+</div>
+
+<div class="projects">
+</div>
+
+<div style="clear:both;"></div>
+
 <div class="wrapper">
-    <h1 id="projects">Projects</h1>
-
-    <div class="filters">
-    </div>
-
-    <div class="projects">
-    </div>
-
     <h1 id="about">About Us</h1>
 
     <div class="text">

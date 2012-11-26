@@ -1,8 +1,9 @@
 gitPage.templates = {
     filter: '<span class="filters__item" data-filter="{{filter}}">{{filter}}</span>',
 
-    project: '<div class="project__item project__item_dchat" style="background-image: url(projects/{{image}});" data-tag="{{tagsString}}">' +
+    project: '<div class="project__item project__item_dchat" data-tag="{{tagsString}}">' +
                 '<i class="icon-cog project__item__background"></i>' +
+                '<img class="project__item__img" src="projects/{{image}}">' +
                 '<div class="project__item__title">{{title}}</div>' +
                 '<div class="project__item__descr">{{description}}</div>' +
 
@@ -12,7 +13,7 @@ gitPage.templates = {
                     '<a href="https://twitter.com/share" target="_blank" title="Tweet It" class="twitter"' +
                         'data-lang="en"' +
                         'data-url="{{#pageUrl}}{{pageUrl}}{{/pageUrl}}' +
-                        '{{^pageUrl}}{{gitUrl}}{{/pageUrl}}"' +
+                        '{{^pageUrl}}https://github.com/{{gitFullName}}{{/pageUrl}}"' +
                         'data-hashtags="DENIVIP,{{title}}"' +
                         'data-text="{{description}}">' +
                         '<i class="icon-twitter"></i>' +
@@ -21,7 +22,7 @@ gitPage.templates = {
                     '<a href="https://plusone.google.com/" target="_blank" title="Google+" class="google"' +
                         'data-lang="en"' +
                         'data-url="{{#pageUrl}}{{pageUrl}}{{/pageUrl}}' +
-                            '{{^pageUrl}}{{gitUrl}}{{/pageUrl}}"' +
+                            '{{^pageUrl}}https://github.com/{{gitFullName}}{{/pageUrl}}"' +
                         'data-hashtags="DENIVIP,{{title}}"' +
                         'data-text="{{description}}">' +
                         '<i class="icon-google-plus"></i>' +
@@ -36,13 +37,13 @@ gitPage.templates = {
                     '</div>{{/pageUrl}}' +
 
                     '<div class="project__item__forkit">' +
-                        '<a href="{{gitUrl}}">' +
+                        '<a href="https://github.com/{{gitFullName}}">' +
                             '<i class="icon-github"></i> fork it' +
                         '</a>' +
                     '</div>' +
 
                     '<div class="project__item__download">' +
-                        '<a href="{{gitUrl}}/archive/master.zip">' +
+                        '<a href="https://github.com/{{gitFullName}}/archive/master.zip">' +
                             '<i class="icon-download"></i> get it' +
                         '</a>' +
                     '</div>' +
