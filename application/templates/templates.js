@@ -1,7 +1,7 @@
 gitPage.templates = {
     filter: '<span class="filters__item" data-filter="{{filter}}">{{filter}}</span>',
 
-    project: '<div class="project__item project__item_dchat" data-tag="{{tagsString}}">' +
+    project: '<div class="project__item" data-tag="{{tagsString}}">' +
                 '<i class="icon-cog project__item__background"></i>' +
                 '<img class="project__item__img" src="projects/{{image}}">' +
                 '<div class="project__item__title">{{title}}</div>' +
